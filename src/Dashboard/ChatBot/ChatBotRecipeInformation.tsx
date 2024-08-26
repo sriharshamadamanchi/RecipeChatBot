@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     marginVertical: moderateScale(10)
   },
   ingredientLabelStyle: {
-    width: '85%'
+    width: '80%'
   },
   instructionCardStyle: {
     flex: 1,

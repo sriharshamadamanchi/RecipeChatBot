@@ -12,6 +12,11 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { RecipeInformation } from './Dashboard/Recipe/RecipeInformation';
 import { ChatBot } from './Dashboard/ChatBot/ChatBot';
+import { useDispatch } from 'react-redux';
+import {
+  storeRecipeAction,
+  storeRecipeDetailsAction
+} from './Dashboard/redux/actions';
 
 const Tab = createBottomTabNavigator();
 
@@ -141,6 +146,14 @@ export const HomeTabbar = () => {
 const Stack = createStackNavigator();
 
 export const Home = () => {
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    // Clear chat details on launch
+    dispatch(storeRecipeAction({ recipies: [], chat: true }));
+    dispatch(storeRecipeDetailsAction({ recipe: undefined, chat: true }));
+  }, [dispatch]);
+
   return (
     <Stack.Navigator
       screenOptions={{
