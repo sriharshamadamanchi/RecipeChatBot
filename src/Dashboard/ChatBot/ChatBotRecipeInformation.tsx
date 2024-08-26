@@ -181,6 +181,10 @@ export const ChatBotRecipeInformation = () => {
     new Array(instructions.length).fill(false)
   );
 
+  React.useEffect(() => {
+    setChecked(new Array(instructions.length).fill(false));
+  }, [setChecked, recipe?.id, instructions?.length]);
+
   if (!recipe) {
     return null;
   }
