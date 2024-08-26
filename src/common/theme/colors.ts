@@ -4,8 +4,6 @@ export const colors = {
 
   loadingIndicator: '#4AADE8',
 
-  divider: '#A9C3D5',
-
   font: {
     default: '#FFFFFF',
     base: '#4AADE8',

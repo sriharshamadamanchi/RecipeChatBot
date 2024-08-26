@@ -19,7 +19,6 @@ interface primaryViewPropsType {
   safeAreaTopColor?: 'default' | 'base' | 'primary' | 'light';
   safeAreaBottomColor?: 'default' | 'base' | 'primary';
   defaultColor?: boolean;
-  showHubOfflineBanner?: boolean;
 }
 
 export const PrimaryView = ({
