@@ -1,0 +1,2 @@
+export const ACCESSIBILITY_MAXIMUM_FONT_SIZE_SCALE = 1.3;
+export const API_TIMEOUT = 15000;
